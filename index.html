@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Transposition App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Music Transposition App</h1>
+    <div class="form-group">
+      <label for="original-key">Original Key:</label>
+      <select id="original-key">
+        <option value="C">C</option>
+        <option value="D">D</option>
+        <option value="E">E</option>
+        <option value="F">F</option>
+        <option value="G">G</option>
+        <option value="A">A</option>
+        <option value="B">B</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="target-key">Transpose To:</label>
+      <select id="target-key">
+        <option value="C">C</option>
+        <option value="D">D</option>
+        <option value="E">E</option>
+        <option value="F">F</option>
+        <option value="G">G</option>
+        <option value="A">A</option>
+        <option value="B">B</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="notes">Enter Notes or Chords (e.g., Cmaj G7 Am):</label>
+      <input type="text" id="notes" placeholder="Enter notes or chords">
+      <small id="validation-message" class="validation-message"></small>
+    </div>
+
+    <div class="form-group toggle-wrapper">
+      <label for="notation-toggle">Select Notation:</label>
+      <button id="notation-toggle" data-notation="sharp">Use Flats (♭)</button>
+    </div>
+
+    <button id="transpose-btn">Transpose</button>
+
+    <div class="output">
+      <h2>Transposed Notes or Chords:</h2>
+      <p id="transposed-notes">-</p>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
